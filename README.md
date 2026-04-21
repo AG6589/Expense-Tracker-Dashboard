@@ -1,11 +1,13 @@
 # 🚀 Xpense - Premium Expense Tracker Dashboard
 
 [![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black)](https://react.dev/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-6.0-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 [![Vite](https://img.shields.io/badge/Vite-8.0-646CFF?logo=vite&logoColor=white)](https://vitejs.dev/)
 [![Firebase](https://img.shields.io/badge/Firebase-12.12-FFCA28?logo=firebase&logoColor=black)](https://firebase.google.com/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.2-38B2AC?logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+**🔴 Live Demo:** [https://ag6589.github.io/Expense-Tracker-Dashboard/](https://ag6589.github.io/Expense-Tracker-Dashboard/)
 
 Xpense is a high-fidelity, professional-grade expense tracking dashboard designed for clarity, aesthetics, and performance. Built with **React 19**, **Vite**, and **Firebase**, it offers a seamless experience for managing personal finances with real-time updates and sophisticated analytics.
 
@@ -21,7 +23,7 @@ Xpense is a high-fidelity, professional-grade expense tracking dashboard designe
 
 ## 🛠️ Tech Stack
 
--   **Frontend**: React 19 (App Router), TypeScript, Framer Motion (Animations)
+-   **Frontend**: React 19 (App Router), JavaScript, Framer Motion (Animations)
 -   **Styling**: Tailwind CSS 4, Lucide React (Icons)
 -   **State Management**: Zustand
 -   **Database/Auth**: Firebase (Firestore & Authentication)
