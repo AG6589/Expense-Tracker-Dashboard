@@ -2,16 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Bell, AlertTriangle, CheckCircle2, TrendingUp, Info, MoreVertical, Trash2 } from 'lucide-react';
 
-interface Notification {
-  id: string;
-  title: string;
-  message: string;
-  time: string;
-  type: 'alert' | 'success' | 'info' | 'warning';
-  read: boolean;
-}
-
-const notifications: Notification[] = [
+const notifications = [
   {
     id: '1',
     title: 'Budget Alert',
@@ -54,7 +45,7 @@ const notifications: Notification[] = [
   },
 ];
 
-const Notifications: React.FC = () => {
+const Notifications = () => {
   const container = {
     hidden: { opacity: 0 },
     show: {
@@ -70,7 +61,7 @@ const Notifications: React.FC = () => {
     show: { opacity: 1, y: 0 }
   };
 
-  const getIcon = (type: string) => {
+  const getIcon = (type) => {
     switch (type) {
       case 'warning': return <AlertTriangle className="w-5 h-5 text-amber-500" />;
       case 'success': return <CheckCircle2 className="w-5 h-5 text-emerald-500" />;

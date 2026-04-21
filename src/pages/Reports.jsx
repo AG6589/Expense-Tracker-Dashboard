@@ -40,7 +40,7 @@ const categoryData = [
   { name: 'Utilities', value: 300, color: '#A78BFA' },
 ];
 
-const Reports: React.FC = () => {
+const Reports = () => {
   return (
     <div className="space-y-8 pb-10">
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">

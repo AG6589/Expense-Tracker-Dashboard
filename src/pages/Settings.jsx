@@ -16,7 +16,7 @@ export default function Settings() {
   const [email, setEmail] = useState(user?.email || '');
   const [password, setPassword] = useState('');
   
-  const handleUpdateProfile = async (e: React.FormEvent) => {
+  const handleUpdateProfile = async (e) => {
     e.preventDefault();
     if (user?.uid === 'guest') {
       toast.success('Profile updated (Guest mode simulated)');
@@ -35,7 +35,7 @@ export default function Settings() {
         await updatePassword(auth.currentUser, password);
       }
       toast.success('Profile updated successfully');
-    } catch (error: any) {
+    } catch (error) {
       toast.error('Failed to update profile. You might need to re-login.');
     }
   };

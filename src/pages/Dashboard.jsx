@@ -21,7 +21,7 @@ export default function Dashboard() {
   const expensesByCategory = transactions.filter(t => t.type === 'expense').reduce((acc, curr) => {
     acc[curr.category] = (acc[curr.category] || 0) + curr.amount;
     return acc;
-  }, {} as Record<string, number>);
+  }, {});
 
   const pieData = Object.keys(expensesByCategory).map(key => ({
     name: key,

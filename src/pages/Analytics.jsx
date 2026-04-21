@@ -39,7 +39,7 @@ export default function Analytics() {
   const expensesByCategory = transactions.filter(t => t.type === 'expense').reduce((acc, t) => {
     acc[t.category] = (acc[t.category] || 0) + t.amount;
     return acc;
-  }, {} as Record<string, number>);
+  }, {});
 
   const highestExpenseCategory = Object.keys(expensesByCategory).length > 0 
     ? Object.entries(expensesByCategory).sort((a, b) => b[1] - a[1])[0][0]

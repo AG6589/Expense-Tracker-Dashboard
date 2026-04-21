@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { useStore } from '@/store/useStore';
-import type { Transaction } from '@/store/useStore';
 import { db } from '@/services/firebase';
 import { collection, addDoc, deleteDoc, doc } from 'firebase/firestore';
 import { Card } from '@/components/ui/card';
@@ -15,7 +14,7 @@ export default function Transactions() {
   const { user, transactions, setTransactions } = useStore();
   const [isAdding, setIsAdding] = useState(false);
   const [searchTerm, setSearchTerm] = useState('');
-  const [filterType, setFilterType] = useState<string>('all');
+  const [filterType, setFilterType] = useState('all');
   
   const [formData, setFormData] = useState({
     amount: '',
@@ -25,7 +24,7 @@ export default function Transactions() {
     type: 'expense'
   });
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!user) return;
     
@@ -35,13 +34,13 @@ export default function Transactions() {
         category: formData.category,
         date: formData.date,
         description: formData.description,
-        type: formData.type as 'income'|'expense',
+        type: formData.type,
         userId: user.uid,
         createdAt: new Date().toISOString()
       };
 
       if (user.uid === 'guest') {
-        const localTx: Transaction = { id: Date.now().toString(), ...newTx, userId: 'guest' };
+        const localTx = { id: Date.now().toString(), ...newTx, userId: 'guest' };
         setTransactions([localTx, ...transactions]);
       } else {
         await addDoc(collection(db, 'transactions'), newTx);
@@ -56,7 +55,7 @@ export default function Transactions() {
     }
   };
 
-  const handleDelete = async (id: string, e: React.MouseEvent) => {
+  const handleDelete = async (id, e) => {
     e.stopPropagation();
     try {
       if (user?.uid === 'guest') {

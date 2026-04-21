@@ -14,7 +14,7 @@ export default function Login() {
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
 
-  const handleAuth = async (e: React.FormEvent) => {
+  const handleAuth = async (e) => {
     e.preventDefault();
     try {
       if (isLogin) {
@@ -25,8 +25,8 @@ export default function Login() {
         toast.success('Account created successfully!');
       }
       navigate('/');
-    } catch (error: any) {
-      if (error.code === 'auth/api-key-not-valid' || error.message.includes('api-key-not-valid')) {
+    } catch (error) {
+      if (error.code === 'auth/api-key-not-valid' || error.message?.includes('api-key-not-valid')) {
         toast.error('Firebase Config missing! Please configure your .env file or use "Guest Demo".', { duration: 5000 });
       } else if (error.code === 'auth/configuration-not-found' || error.code === 'auth/operation-not-allowed') {
         toast.error('Auth provider disabled! Please enable "Email/Password" in the Firebase Console (Build > Authentication > Sign-in method).', { duration: 7000 });
@@ -38,7 +38,7 @@ export default function Login() {
 
   const handleGuestLogin = () => {
     // Bypass firebase entirely for demo purposes
-    useStore.getState().setUser({ uid: 'guest', email: 'guest@demo.com', displayName: 'Demo User' } as any);
+    useStore.getState().setUser({ uid: 'guest', email: 'guest@demo.com', displayName: 'Demo User' });
     toast.success('Logged in as Guest!');
     navigate('/');
   };
@@ -48,8 +48,8 @@ export default function Login() {
       await signInWithPopup(auth, googleProvider);
       toast.success('Logged in with Google!');
       navigate('/');
-    } catch (error: any) {
-      if (error.code === 'auth/api-key-not-valid' || error.message.includes('api-key-not-valid')) {
+    } catch (error) {
+      if (error.code === 'auth/api-key-not-valid' || error.message?.includes('api-key-not-valid')) {
         toast.error('Firebase Config missing! Please configure your .env file or use "Guest Demo".', { duration: 5000 });
       } else if (error.code === 'auth/configuration-not-found' || error.code === 'auth/operation-not-allowed') {
         toast.error('Google Auth disabled! Please enable "Google" in the Firebase Console (Build > Authentication > Sign-in method).', { duration: 7000 });

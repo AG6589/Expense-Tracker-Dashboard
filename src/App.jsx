@@ -1,10 +1,10 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { format, subMonths } from 'date-fns';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
 import { onAuthStateChanged } from 'firebase/auth';
 import { auth } from '@/services/firebase';
-import { useStore, type Transaction } from '@/store/useStore';
+import { useStore } from '@/store/useStore';
 import { db } from '@/services/firebase';
 import { collection, onSnapshot, query, where, orderBy } from 'firebase/firestore';
 
@@ -37,7 +37,7 @@ function App() {
 
     if (user.uid === 'guest') {
       const now = new Date();
-      const mockData: Transaction[] = [
+      const mockData = [
         { id: '1', amount: 5000, category: 'Salary', date: format(subMonths(now, 0), 'yyyy-MM-01'), description: 'Monthly Salary', type: 'income', userId: 'guest' },
         { id: '2', amount: 1200, category: 'Rent', date: format(subMonths(now, 0), 'yyyy-MM-02'), description: 'Apartment Rent', type: 'expense', userId: 'guest' },
         { id: '3', amount: 150, category: 'Groceries', date: format(subMonths(now, 0), 'yyyy-MM-05'), description: 'Weekly Groceries', type: 'expense', userId: 'guest' },
@@ -58,9 +58,9 @@ function App() {
     );
 
     const unsubscribeTrans = onSnapshot(q, (snapshot) => {
-      const trans: Transaction[] = [];
+      const trans = [];
       snapshot.forEach((doc) => {
-        trans.push({ id: doc.id, ...doc.data() } as Transaction);
+        trans.push({ id: doc.id, ...doc.data() });
       });
       setTransactions(trans);
     }, (error) => {

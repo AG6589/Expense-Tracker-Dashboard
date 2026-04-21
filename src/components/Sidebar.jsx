@@ -51,8 +51,8 @@ export default function Sidebar() {
             className={({ isActive }) =>
               `relative flex items-center justify-center w-12 h-12 rounded-xl transition-all duration-300 group ${
                 isActive
-                  ? 'text-primary bg-primary/10'
-                  : 'text-muted-foreground hover:text-white hover:bg-white/5'
+                   ? 'text-primary bg-primary/10'
+                   : 'text-muted-foreground hover:text-white hover:bg-white/5'
               }`
             }
           >
@@ -75,8 +75,8 @@ export default function Sidebar() {
             className={({ isActive }) =>
               `relative flex items-center justify-center w-12 h-12 rounded-xl transition-all duration-300 group ${
                 isActive
-                  ? 'text-primary bg-primary/10'
-                  : 'text-muted-foreground hover:text-white hover:bg-white/5'
+                   ? 'text-primary bg-primary/10'
+                   : 'text-muted-foreground hover:text-white hover:bg-white/5'
               }`
             }
           >
