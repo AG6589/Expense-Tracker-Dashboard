@@ -68,6 +68,26 @@ Xpense is a high-fidelity, professional-grade expense tracking dashboard designe
 
 *(Add your awesome dashboard screenshots here to WOW your visitors!)*
 
+<img width="1919" height="908" alt="image" src="https://github.com/user-attachments/assets/5bb40895-a730-4967-8c87-7d1e399e9b7d" />
+<img width="1919" height="914" alt="image" src="https://github.com/user-attachments/assets/0ce3f8a4-8ebd-4752-bcac-49935130b251" />
+<img width="1919" height="912" alt="image" src="https://github.com/user-attachments/assets/7186f76f-190a-4ecf-8c60-6112bc1e3bbf" />
+<img width="1919" height="904" alt="image" src="https://github.com/user-attachments/assets/21b81433-e7de-42dc-9930-b85d63839516" />
+<img width="1919" height="909" alt="image" src="https://github.com/user-attachments/assets/49eecf4a-1fc9-42d4-92e7-e1658e0a00c4" />
+<img width="1919" height="907" alt="image" src="https://github.com/user-attachments/assets/a7b30141-6009-4cdd-ba93-574c5c59ef4a" />
+<img width="1919" height="919" alt="image" src="https://github.com/user-attachments/assets/9348b317-1423-437b-bf81-c3b27dd2f4fd" />
+<img width="1919" height="917" alt="image" src="https://github.com/user-attachments/assets/9279fc3f-0774-4484-af5f-7b9361c67b9c" />
+<img width="1919" height="912" alt="image" src="https://github.com/user-attachments/assets/cb52db22-0f5e-490a-891b-1334e46b23a3" />
+<img width="1919" height="914" alt="image" src="https://github.com/user-attachments/assets/c9f0a59f-66d5-4d03-98e2-369205f80548" />
+
+
+
+
+
+
+
+
+
+
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
